@@ -32,12 +32,12 @@ namespace Autofac_pratice
     {
         public void Off()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Turn Off");
         }
 
         public void On()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Turn On");
         }
     }
 
