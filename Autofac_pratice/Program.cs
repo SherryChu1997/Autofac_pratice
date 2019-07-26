@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Autofac_pratice
 {
-    internal class Button
+    internal interface IButton
+    {
+        void Off();
+
+        void On();
+    }
+
+    internal class Button : IButton
     {
         public void Off()
         {
