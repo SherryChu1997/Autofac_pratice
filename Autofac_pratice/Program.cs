@@ -30,7 +30,12 @@ namespace Autofac_pratice
 
     internal class Light
     {
-        private readonly Button _lightButton = new Button();
+        private readonly IButton _lightButton;
+
+        public Light(IButton lightButton)
+        {
+            _lightButton = lightButton;
+        }
 
         internal void Pull()
         {
@@ -47,7 +52,7 @@ namespace Autofac_pratice
     {
         private static void Main(string[] args)
         {
-            var newLight = new Light();
+            var newLight = new Light(new Button());
             newLight.Pull();//then turn on
             newLight.PullTwice();//then turn off
         }
