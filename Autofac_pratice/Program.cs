@@ -17,13 +17,11 @@ namespace Autofac_pratice
     {
         public void Off()
         {
-            //Console.WriteLine("TURN OFF!!!");
             throw new NotImplementedException();
         }
 
         public void On()
         {
-            //Console.WriteLine("TURN ON!!!");
             throw new NotImplementedException();
         }
     }
