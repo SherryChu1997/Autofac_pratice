@@ -6,9 +6,37 @@ using System.Threading.Tasks;
 
 namespace Autofac_pratice
 {
-    class Program
+    internal class Button
     {
-        static void Main(string[] args)
+        public void Off()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void On()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    internal class Light
+    {
+        internal void pull()
+        {
+            var lightButton = new Button();
+            lightButton.On();
+        }
+
+        internal void pullTwice()
+        {
+            var lightButton = new Button();
+            lightButton.Off();
+        }
+    }
+
+    internal class Program
+    {
+        private static void Main(string[] args)
         {
         }
     }
