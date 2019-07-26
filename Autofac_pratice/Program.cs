@@ -10,26 +10,28 @@ namespace Autofac_pratice
     {
         public void Off()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("TURN OFF!!!");
         }
 
         public void On()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("TURN ON!!!");
         }
     }
 
     internal class Light
     {
+        private Button _lightButton = new Button();
+
         internal void pull()
         {
-            var lightButton = new Button();
+            var lightButton = _lightButton;
             lightButton.On();
         }
 
         internal void pullTwice()
         {
-            var lightButton = new Button();
+            var lightButton = _lightButton;
             lightButton.Off();
         }
     }
@@ -38,6 +40,9 @@ namespace Autofac_pratice
     {
         private static void Main(string[] args)
         {
+            var newLight = new Light();
+            newLight.pull();//then turn on
+            newLight.pullTwice();//then turn off
         }
     }
 }
