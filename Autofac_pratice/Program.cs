@@ -28,6 +28,19 @@ namespace Autofac_pratice
         }
     }
 
+    internal class DecideButton : IButton
+    {
+        public void Off()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void On()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     internal class Light
     {
         private readonly IButton _lightButton;
